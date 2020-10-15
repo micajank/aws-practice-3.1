@@ -19,3 +19,5 @@ const Content = props => {
         </main>
     )
 }
+
+export default Content

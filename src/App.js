@@ -3,12 +3,19 @@ import Amplify, { API, graphqlOperation } from 'aws-amplify'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { withAuthenticator } from '@aws-amplify/ui-react'
 import Content from './content/Content'
-import jwtDecode from 'jwt-decode'
-import './scss/main.scss'
+
+// Stuff we don't have yet
+// import jwtDecode from 'jwt-decode'
+// import './scss/main.scss' 
 
 const App = props => {
 
     // implement updateuser function and pass it to content
+    
+    const user = {
+        name:"John Doe",
+        email:"123@test.com"
+    }
     
     return (
         <Router>
