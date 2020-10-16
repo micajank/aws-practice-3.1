@@ -1,6 +1,14 @@
 {
+  "auth": {
+    "awspractice3e9991568": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
   "api": {
-    "aws3demo": {
+    "awspractice3": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -9,20 +17,12 @@
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 7,
-              "description": "demokey"
+              "description": "demo"
             }
           },
           "additionalAuthenticationProviders": []
         }
       }
-    }
-  },
-  "auth": {
-    "awspractice325017df7": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false
     }
   }
 }

@@ -1,0 +1,133 @@
+type Todo @model {
+  id: ID!
+  name: String!
+  description: String
+}
+
+type AcademicYearStatus @model {
+  id: ID!
+  academicYear: AcademicYear
+  financialAidStatus: String
+  studentStatus: String
+}
+
+type AcademicYearStatusInput @model {
+  id: ID!
+  academicYearId: String
+  financialAidStatus: String
+  studentStatus: String
+}
+
+type AcademicYear @model {
+  id: ID!
+  year: String
+  isActive: Boolean
+}
+
+type Class @model {
+  id: ID!
+  academicYear: AcademicYear
+  quarter: String
+  classNumber: String
+  className: String
+  status: String
+  tuition: Int
+  fees: Int
+  awarded: Int
+  voucher: Int
+  undetermined: Int
+  invoice: Boolean
+  paid: Boolean
+  paidDate: String
+  reimbursed: Boolean
+  reimbursedDate: String
+  student: Student
+}
+
+type Document @model {
+  id: ID!
+  title: String
+  link: String
+  student: Student
+}
+
+type Note @model {
+  id: ID!
+  user: User
+  note: String
+  createdDate: String
+  bookmark: Boolean
+}
+
+type QuickLink @model {
+  id: ID!
+  title: String
+  link: String
+}
+
+type Student @model {
+  id: ID!
+  firstName: String
+  lastName: String
+  dateOfBirth: String
+  ubbId: String
+  docNum: Int
+  location: StudentLocationInput
+  runwayCohort: String
+  gpa: StudentGpaInput
+  race: String
+  fafsaReceived: Boolean
+  sentToAccounting: Boolean
+  readyToAward: Boolean
+  newStudent: Boolean
+  archiveStudent: Boolean
+  academicYearStatus: [AcademicYearStatus]
+  classes: [Class]
+  documents: [Document]
+  tasks: [Task]
+  notes: [Note]
+}
+
+type StudentGpaInput @model {
+  id: ID!
+  value: Float
+  asOfDate: String
+}
+
+type StudentLocationInput @model {
+  id: ID!
+  name: String
+  asOfDate: String
+}
+
+type StudentStatus @model {
+  id: ID!
+  title: String
+}
+
+type Task @model {
+  id: ID
+  flag: Boolean
+  user: User
+  document: String
+  student: Student
+  assignedDate: String
+  dueDate: String
+  completed: Boolean
+  completedDate: String
+  detail: String
+}
+
+type User @model {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  email: String!
+  admin: Boolean
+  avatar: String
+  color: String
+  quickLinks: [QuickLink]
+  tasks: [Task]
+  notes: [Note]
+  token: String
+}
