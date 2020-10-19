@@ -1,6 +1,6 @@
 projects:
   awspractice3:
-    schemaPath: src/graphql/schema.json
+    schemaPath: amplify/backend/api/awspractice3/build/schema.graphql
     includes:
       - src/graphql/**/*.js
     excludes:

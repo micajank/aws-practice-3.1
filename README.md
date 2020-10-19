@@ -27,3 +27,14 @@
 5. Create Signup Form
     1. Needs to create a User in the Database upon creation
     2. Make it only accessable by Admin
+
+## How to filter requests
+```
+    API.graphql(graphqlOperation(queries.listTodos, {
+        filter: {
+            status: {
+                eq: "completed"
+            }
+        }
+    })));
+```
