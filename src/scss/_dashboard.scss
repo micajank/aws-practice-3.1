@@ -1,0 +1,165 @@
+.greeting {
+    color: $accent-color3;
+}
+
+.dashboard-row-one {
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.dashboard-row-two {
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.my-tasks {
+    max-height: 250px;
+    width: 885px;
+    overflow-y: scroll;
+}
+
+.task-table-dashboard {
+    margin-top: -4%;
+    width: 100%;
+}
+
+.student-status {
+    width: 250px;
+    margin-left: 1%;
+    margin-right: .5%;
+}
+
+.current-students {
+    width: 853px;
+    max-height: 250px;
+    margin-right: 1%;
+    overflow-y: scroll;
+}
+
+.funding {
+    width: 250px;
+}
+
+.quick-links {
+    overflow-y: scroll;
+    width: 500px;
+    max-height: 250px;
+}
+
+.ql {
+    display: block;
+    li {
+    margin-bottom: 1.5%;
+    }
+}
+
+.delete-quick-link {
+    width: 20px;
+    margin-left: 3%;
+}
+
+.round-button-dashboard-task {
+    left: 800px;
+    top: 136px;
+}
+
+.round-button-dashboard-student {
+    left: 800px;
+    top: 405px;
+}
+
+.round-button-dashboard-quicklink {
+    left: 1340px;
+    top: 405px;
+}
+
+.quick-link-pop-up {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.link-cancel {
+    width: 20%;
+    height: 10%;
+    background-color: #FFFFFF;
+    border: none;
+    margin-top: 5%;
+    margin-left: 55%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: rgba(0, 0, 0, 0.38);
+}
+
+.link-save {
+    width: 20%;
+    height: 10%;
+    background-color: #FFFFFF;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: #006EAB;
+}
+
+.current-student-table {
+    margin-top: -3%;
+}
+
+.pell-grants, .UBB-funded, .undetermined, .pell-eligible, .pell-ineligible, .total {
+    font-size: 1em;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.pell-eligible, .pell-grants {
+    background-color: #90D279;
+}
+
+.pell-ineligible, .UBB-funded {
+    background-color: #DC8A70;
+}
+
+.undetermined {
+    background-color: #F3D78D;
+}
+
+.pell-eligible-report {
+    margin-left: 18%;
+}
+
+.pell-ineligible-report {
+    margin-left: 12%;
+}
+
+.pell-undetermined-report {
+    margin-left: 10%;
+}
+
+.pell-grants-report {
+    margin-left: 20%;
+}
+
+.pell-ubb-funded-report {
+    margin-left: 16%;
+}
+
+.funding-total {
+    margin-left: 40%;
+}
+
+.pell-total-report {
+    margin-left: 41%;
+}

@@ -1,0 +1,100 @@
+@include setColumnWidths('classes-header', 10% 12% 11% 16% 11% 8% 8% 1fr 9% 1fr);
+@include setColumnWidths('classes-row', 50% 50%);
+// @include setColumnWidths('classes-row2', 10% 12% 11% 16% 1fr)
+
+.student-record-classes {
+    min-height: 15%;
+}
+
+.class-rows {
+    width: 100%;
+    padding: 0px 16px;
+}
+
+.round-button-classes {
+    // position: absolute;
+    top: -3%;
+    right: 6%;
+}
+
+.square-button-classes {
+    position: relative;
+    left: 1200px;
+}
+
+.quarters-accordian {
+    width: 100%;
+}
+
+.yearquarter-dropdowns {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.add-class {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.edit-class {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.add-class-row-one {
+    display: inline-flex;
+}
+
+.class-radials {
+    margin-top: 5%;
+}
+
+.add-class-row-two {
+    margin-left: 42%;
+}
+
+.class-checkbox {
+    margin-top: 20%;
+}
+
+.class-cancel {
+    width: 20%;
+    height: 5%;
+    background-color: #FFFFFF;
+    border: none;
+    margin-top: 3%;
+    margin-left: 58%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: rgba(0, 0, 0, 0.38);
+}
+
+.class-save {
+    width: 20%;
+    height: 5%;
+    background-color: #FFFFFF;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: #006EAB;
+}

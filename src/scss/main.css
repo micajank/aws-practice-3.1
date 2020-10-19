@@ -1,0 +1,663 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------ FONT STYLES--------- */
+.headline6, .headline6-white {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  width: 100%;
+}
+
+.headline6-white {
+  color: white;
+}
+
+.body1, .body1-white {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.body1-white {
+  color: white;
+}
+
+.body2, .body2-white {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #000000;
+}
+
+.body2-white {
+  color: white;
+}
+
+.subtitle2, .subtitle2-white {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+.subtitle2-white {
+  color: white;
+}
+
+/* ------ REUSABLE COMPONENT STYLES--------- */
+/* ----- Buttons ----- */
+.round-button {
+  position: absolute;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background: #CFAC51;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 4px 5px rgba(0, 0, 0, 0.14);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 4px 5px rgba(0, 0, 0, 0.14);
+  border-radius: 28px;
+}
+
+.square-gold-button {
+  background: #CFAC51;
+  position: absolute;
+  border-radius: 4px;
+  height: 3em;
+  width: 7em;
+}
+
+/* ----- Search Bar ----- */
+.search-bar {
+  position: absolute;
+  left: 73%;
+  width: 15%;
+  height: 5%;
+  top: 9%;
+  background: #FFFFFF;
+  border-radius: 3.5px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 85.5%;
+  top: 9.75%;
+}
+
+/*-------- GLOBAL TABLE STYLES ----------- */
+table {
+  position: relative;
+  border-spacing: 0 .25em;
+  overflow: scroll;
+  margin-top: 20px;
+  width: 100%;
+}
+
+thead {
+  background: transparent;
+  text-align: left;
+}
+
+th, td {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+td {
+  background: white;
+}
+
+/* ------- Styles that apply to Task and Student Databases ------- */
+.db_background {
+  background-color: #0063A0;
+  position: absolute;
+  width: 100vw;
+  height: 859px;
+  left: 0px;
+  top: 165px;
+}
+
+.box, .box__incomplete, .box__incomplete__none, .box__complete, .box__complete__none {
+  position: absolute;
+  left: 1.39%;
+  right: 1.39%;
+  background-color: #D7EDF3;
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.87);
+  overflow: scroll;
+}
+
+.data-label, .data_header, .label-container {
+  position: absolute;
+  z-index: 1;
+  left: 33px;
+  background-color: #9AD0E1;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.tabs, .task-tabs, .student-tabs {
+  position: absolute;
+  left: 20px;
+  top: 113px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Secondary_Nav (TASKS Database_Nav) */
+.task-tabs {
+  width: 505px;
+  height: 52px;
+}
+
+.task-tabs__tab {
+  position: absolute;
+  width: 241px;
+  height: 52px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0.15px;
+  border-radius: 4px 4px 0px 0px;
+  background: #0094BC;
+}
+
+.task-tabs__tab__assigned {
+  left: 250px;
+}
+
+.task-tabs__tab__active {
+  background: #0063A0;
+}
+
+/* label above data */
+.data_header {
+  width: 320px;
+  height: 38px;
+}
+
+.data_header__incomplete {
+  top: 50px;
+}
+
+.data_header__complete {
+  top: 490px;
+}
+
+/* custom add button class for positioning */
+.round-button-taskdb {
+  right: 3%;
+  top: 6%;
+}
+
+/* Task DB Container Styling */
+.box__incomplete, .box__incomplete__none {
+  top: 9%;
+  min-height: 40%;
+  max-height: 50%;
+}
+
+.box__complete, .box__complete__none {
+  top: 60%;
+  min-height: 30%;
+  max-height: 40%;
+}
+
+.box__complete__none {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.box__incomplete__none {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* Custom Table Styles */
+.table-column-grid-tasks {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr (1fr)[8] 3fr;
+      grid-template-columns: 0.5fr repeat(8, 1fr) 3fr;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  margin-bottom: .5%;
+}
+
+.task__detail-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 90%;
+}
+
+.student-database {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.label-container {
+  width: 185px;
+  height: 30px;
+  top: 6%;
+}
+
+.student-table {
+  min-height: 50vh;
+  top: 9%;
+}
+
+.student-tabs {
+  width: 200px;
+  height: 52px;
+  background: #0063A0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0.15px;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.student-tabs__tab {
+  position: absolute;
+  width: 241px;
+  height: 52px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0.15px;
+  border-radius: 4px 4px 0px 0px;
+  background: #0094BC;
+}
+
+.round-button-sd {
+  position: absolute;
+  left: 95%;
+  top: 22.5%;
+}
+
+.student-info {
+  width: 95vw;
+  height: 54vh;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.card-header {
+  background: #0063A0;
+  color: #FFFFFF;
+}
+
+.scc {
+  background: #9AD0E1;
+  position: absolute;
+  width: 17%;
+  height: 25%;
+  left: 58%;
+  top: 33%;
+}
+
+.scc-title {
+  padding-top: 1.5%;
+  padding-left: 1.5%;
+}
+
+.scc-row {
+  text-align: right;
+  line-height: 40%;
+  padding-top: 15%;
+}
+
+.documents {
+  position: absolute;
+  width: 300px;
+  height: 275px;
+  left: 76%;
+  top: 23%;
+  overflow: scroll;
+}
+
+.dropdown-label {
+  margin-top: -7%;
+}
+
+.line-one {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  margin-right: 1%;
+}
+
+.line-two {
+  position: relative;
+  display: inline-block;
+  width: 19%;
+  padding-right: .5%;
+  padding-top: .5%;
+}
+
+.line-three {
+  position: relative;
+  display: inline-block;
+  width: 19%;
+  padding-right: .25%;
+  padding-top: .5%;
+}
+
+.line-four {
+  position: relative;
+  display: inline-block;
+  width: 18%;
+  margin-right: 1%;
+  padding-top: .5%;
+}
+
+.checkbox {
+  font-size: 20px;
+  text-align: right;
+  padding-bottom: 4%;
+}
+
+.row-one, .row-two, .row-three, .row-four {
+  height: 3.75%;
+}
+
+.save-si {
+  position: absolute;
+  top: 60%;
+  right: 4%;
+}
+
+.round-button-si {
+  position: absolute;
+  left: 94%;
+  top: 23%;
+}
+
+form {
+  font-size: 12px;
+  width: 70vw;
+  padding-top: .5%;
+}
+
+label {
+  display: block;
+  height: 16px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+li {
+  background: #0063A0;
+  list-style-type: none;
+  display: inline;
+  padding: .25em;
+}
+
+hr {
+  border: 5px solid #0063A0;
+}
+
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 10%;
+}
+
+.square-gold-button-login {
+  background: #CFAC51;
+  position: absolute;
+  border-radius: 4px;
+  height: 3em;
+  width: 7em;
+  margin-left: 2%;
+  margin-top: 1%;
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+.forgot-password {
+  background: #FFFFFF;
+  color: gray;
+  border: none;
+  font-size: 1.25em;
+  font-family: Roboto;
+  font-weight: 500;
+  padding-left: 13%;
+  margin-top: 2.3%;
+}
+
+.login-form {
+  display: inline-block;
+  margin-left: 45%;
+  text-align: left;
+}
+
+img {
+  height: 15%;
+  width: 33%;
+}
+
+.accordian {
+  width: 95vw;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.accordian__divider {
+  width: 95vw;
+}
+
+.accordian__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.accordian__header {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  grid-auto-flow: column;
+}
+
+.accordian__center-fields {
+  text-align: center;
+}
+
+.accordian-task__row {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr (1fr)[4] 3fr;
+      grid-template-columns: 0.5fr repeat(4, 1fr) 3fr;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  margin-bottom: .5%;
+  background-color: white;
+}
+
+.accordian-task__header {
+  background-color: white;
+}
+
+.round-button-record-tasks {
+  position: absolute;
+  top: 146%;
+  right: 6%;
+}
+
+.new-student-button {
+  background: rgba(33, 33, 33, 0.08);
+  border-radius: 4px;
+  width: 20%;
+  height: 80%;
+  margin-left: 13%;
+}
+
+.student-record {
+  height: 400vh;
+  width: 100vw;
+}
+
+.student-heading {
+  position: absolute;
+  width: 70%;
+  height: 44px;
+  left: 45px;
+  top: 70px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.table-column-grid-classes-header {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 12% 11% 16% 11% 8% 8% 1fr 9% 1fr;
+      grid-template-columns: 10% 12% 11% 16% 11% 8% 8% 1fr 9% 1fr;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  margin-bottom: .5%;
+}
+
+.table-column-grid-classes-row {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  margin-bottom: .5%;
+}
+
+.student-record-classes {
+  min-height: 15%;
+}
+
+.class-rows {
+  width: 97%;
+  padding: 0px 16px;
+}
+
+.round-button-classes {
+  position: absolute;
+  top: 75%;
+  right: 6%;
+}
+
+.square-button-classes {
+  position: absolute;
+  right: 0%;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+table tr {
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */

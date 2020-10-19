@@ -1,0 +1,62 @@
+.label-container {
+    @extend .data-label;
+    width: 185px;
+    height: 38px;
+    left: 40px;
+    top: 5%;
+}
+
+.student-box {
+    @extend .box;
+    min-height: 700px;
+}
+
+.student-tabs {
+    @extend .tabs;
+    width: 150px;
+    height: 52px;
+    background: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.15px;
+    border-radius: 4px 4px 0px 0px;
+    // &__tab {
+    //     // position: absolute;
+    //     width: 241px;
+    //     height: 52px;
+    //     color: white;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     letter-spacing: 0.15px;
+    //     border-radius: 4px 4px 0px 0px;
+    //     background: $secondary-color;
+    // }
+}
+
+.round-button-sd {
+    position: absolute;
+    left: 95%;
+    top: 27%;
+}
+
+// .search-bar-sd {
+//     left: 76vw;
+//     width: 20em;
+//     height: 3.5em;
+//     top: 1px;
+//     background: #FFFFFF;
+//     border-radius: 3.5px;
+// }
+
+// .search-icon-sd {
+//     left: 95vw;
+//     top: 16px;
+// }
+
+.export-students {
+    float: right;
+    margin-top: -6%;
+    margin-right: 17%;
+}
