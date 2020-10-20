@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 import {Auth} from 'aws-amplify'
 import { Route } from 'react-router-dom'
 
-import Dashboard from './pages/Dashboard/Dashboard'
-import StudentDatabase from './pages/StudentDatabase/StudentDatabase'
-
+//import Dashboard from './Pages/Dashboard/Dashboard'
+//import StudentDatabase from './Pages/StudentDatabase/StudentDatabase'
+import TestStub from './TestStub'
 
 const Content = props => {
 
@@ -14,10 +14,7 @@ const Content = props => {
         <main>
             <div className="container">
                 <Route exact path="/" render={
-                    () => <Dashboard user={props.user}/>
-                } />
-                <Route path="/studentdb" render={
-                    () => <StudentDatabase user={props.user} />
+                    () => <TestStub user={props.user}/>
                 } />
             </div>
         </main>

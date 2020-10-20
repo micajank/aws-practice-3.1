@@ -12,9 +12,9 @@ import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 
 //queries
-import { useQuery, useMutation } from '@apollo/client';
-import { getUsersQuery } from '../../../../queries/queries'
-import { addUserMutation, deleteUserMutation } from '../../../../queries/mutations'
+import Amplify, { API, graphqlOperation } from 'aws-amplify'
+import { getUsersQuery } from '../../../../graphql/custom'
+import { addUserMutation, deleteUserMutation } from '../../../../graphql/custom'
 
 //reusable components
 import PopUp from '../../../Reusable_Components/PopUp'
@@ -22,6 +22,8 @@ import RoundButton from '../../../Reusable_Components/RoundButton'
 
 const UserCard = props => {
 
+    // STATES
+    let [usersData, setUsersData] = useState([])
     let [addUserPopUp, setAddUserPopUp] = useState(false)
     let [showPopUp, setShowPopUp] = useState(false)
     let [userAdmin, setUserAdmin] = useState(false)
@@ -32,47 +34,70 @@ const UserCard = props => {
     let [addUser] = useMutation(addUserMutation)
     let [deleteUser] = useMutation(deleteUserMutation)
 
+    // STYLES
     const useStyles = makeStyles({
         root: props.cardStyles,
         content: props.cardContent
     });
-    
     const classes = useStyles()
 
+    // QUERIES
     const {loading, error, data} = useQuery(getUsersQuery)
+    async function getUsers() {
+        try {
+            const usersQueryData = await API.graphql(graphqlOperation(getUsersQuery))
+            setUsersData(usersQueryData.data.getUsersQuery.items)
+        } catch (err) { 
+            console.log("Error fetching ") 
+            return <p> Error :( </p>
+        }
+    }
+    if (!usersQueryData) return <p>Loading...</p>
 
-    console.log('Line 23 Users', data)
-
-    if (loading) return <p>Loading...</p>
-
-    if (error) {
-        console.log(error)
-        return <p>Error :(</p>
+    // MUTATIONS
+    async function addUser(newUserData) {
+        try { await API.graphql(graphqlOperation(addUserMutation, {input: newUserData})) } 
+        catch { return <p> Error :( </p> }
+    }
+    async function deleteUser(userId) {
+        try { await API.graphql(graphqlOperation(deleteUserMutation, {input:userId})) }
+        catch { return <p> Error :( </p> }
     }
 
+    // HELPER FUNCTIONS
+    const handleSubmit = () => {
+        console.log('trying to add new user')
+        let newUserData = {
+            firstName: userFirstName,
+            lastName: userLastName,
+            email: userEmail,
+            admin: userAdmin
+        }
+        addUser(newUserData)
+        /**
+         * @TODO ADD SIGNUP FUNCTIONALITY FROM COGNITO AND AUTH
+         */
+        setAddUserPopUp(false)
+    }
     const handleDeleteUser = (e) => {
-        console.log('clicked icon to delete user', e.target.value)
-        console.log('USERID', props.user)
-        deleteUser({variables: {id: e.target.value, userId: props.user._id }})
+        console.log('Trying to delete user:', e.target.value)
+        if(props.user.admin) deleteUser(e.target.value)
+        else return {message: "PERMISSION DENIED"}
+        /**
+         * @TODO ADD DELETE FUNCTIONALITY FROM COGNITO AND AUTH
+         */
     }
-
     const handleAddUserOpen = () => {
         console.log('clicked to open pop up')
         setAddUserPopUp(true)
     }
-
     const handleAddUserClose = () => {
         console.log('closing pop up')
         setAddUserPopUp(false)
     }
 
-    const handleSubmit = () => {
-        console.log('trying to add new user')
-        addUser({variables: {firstName: userFirstName, lastName: userLastName, email: userEmail, password: userPassword, admin: userAdmin}})
-        setAddUserPopUp(false)
-    }
-
-    let users = data.users.map((u, i) => {
+    // USER COMPONENTS
+    let users = usersData.map((u, i) => {
         // console.log('Line 73', u.id)
         return (
             <div key={i} className="delete-user">
@@ -84,6 +109,7 @@ const UserCard = props => {
         )
     })
 
+    // POP UP BODY
     let body = (
         <div className="add-user-pop-up">
             <div className="add-user-row-one">
@@ -144,6 +170,7 @@ const UserCard = props => {
         </div>
     )
 
+    // MAIN COMPONENT
     return (
         <div>
             <Card className={classes.root}>

@@ -445,16 +445,18 @@ export const getUsersQuery = `
         $nextToken: String
     ) {
         listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
-            id
-            avatar
-            firstName
-            lastName
-            email
-            admin
-            quickLinks {
+            items {    
                 id
-                title
-                link
+                avatar
+                firstName
+                lastName
+                email
+                admin
+                quickLinks {
+                    id
+                    title
+                    link
+                }
             }
         }
     }
