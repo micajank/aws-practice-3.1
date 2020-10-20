@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import Amplify, { API, graphqlOperation } from 'aws-amplify'
+import Amplify, { Auth, API, graphqlOperation } from 'aws-amplify'
+import awsconfig from './aws-exports';
 import { BrowserRouter as Router } from 'react-router-dom'
-import { withAuthenticator } from '@aws-amplify/ui-react'
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
+import { Authenticator } from "aws-amplify-react";
 import Content from './content/Content'
+import AuthWrapper from "./AuthWrapper";
+Amplify.configure(awsconfig);
 
 // Stuff we don't have yet
 // import jwtDecode from 'jwt-decode'
@@ -20,10 +24,14 @@ const App = props => {
     return (
         <Router>
             <div className="App">
-                <Content user={user} />
+            {/* <AmplifySignOut /> */}
+                {/* <Content user={user} /> */}
+                <Authenticator hideDefault={true} amplifyConfig={awsconfig}>
+                    <AuthWrapper />
+                </Authenticator>
             </div>
         </Router>
     )
 }
 
-export default withAuthenticator(App)
+export default App;

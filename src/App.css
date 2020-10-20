@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+#username {
+  border: solid red 1px;
+}

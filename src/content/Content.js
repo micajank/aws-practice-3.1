@@ -4,20 +4,40 @@ import { Route } from 'react-router-dom'
 import Dashboard from './pages/Dashboard/Dashboard'
 import StudentDatabase from './pages/StudentDatabase/StudentDatabase'
 
-const Content = props => {
-    
-    return (
-        <main>
-            <div className="container">
-                <Route exact path="/" render={
-                    () => <Dashboard user={props.user}/>
-                } />
-                <Route path="/studentdb" render={
-                    () => <StudentDatabase user={props.user} />
-                } />
-            </div>
-        </main>
-    )
-}
+export default function Content(props) {
 
-export default Content
+
+        if (props.authState === "signedIn") {
+          return (
+            <main>
+                <div className="container">
+                    <Route exact path="/" render={
+                        () => <Dashboard user={props.user}/>
+                    } />
+                    <Route path="/studentdb" render={
+                        () => <StudentDatabase user={props.user} />
+                    } />
+                </div>
+            </main>
+          );
+        } else {
+          return null;
+        }
+
+    
+    
+    }
+    
+    
+    // return (
+    //     <main>
+    //         <div className="container">
+    //             <Route exact path="/" render={
+    //                 () => <Dashboard user={props.user}/>
+    //             } />
+    //             <Route path="/studentdb" render={
+    //                 () => <StudentDatabase user={props.user} />
+    //             } />
+    //         </div>
+    //     </main>
+    // )
