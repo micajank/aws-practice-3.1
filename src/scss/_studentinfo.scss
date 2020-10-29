@@ -1,0 +1,300 @@
+.student-info {
+    width: 100%;
+    a {
+        display: block;
+    }
+    form {
+        font-size: 12px;
+        width: 75%;
+        padding-top: .5%;
+        margin: 0;
+    }
+}
+
+.scc {
+    background: $tertiary-color;
+    position: absolute;
+    width: 20%;
+    // height: 51%;
+    left: 51%;
+    top: 37%;
+    padding: 1%;
+}
+
+// .scc-title {
+//     // padding-top: 1.5%;
+//     // padding-left: 1.5%;
+// }
+
+.scc-row {
+    text-align: right;
+    line-height: 40%;
+    padding-top: 10%;
+}
+
+.documents {
+    position: absolute;
+    width: 344px;
+    height: 219px;
+    left: 72%;
+    top: 20%;
+    overflow: scroll;
+}
+
+.line-one {
+    margin-right: 1%;
+}
+
+.line-two {
+    width: 135px;
+    margin-right: 1%;
+}
+
+.line-three {
+    padding-top: 1.5%;
+}
+
+.checkbox {
+    font-size: 20px;
+    text-align: right;
+    padding-bottom: 4%;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+}
+
+// .row-one, .row-two, .row-three, .row-four {
+//     height: 3.75%;
+// }
+
+.save-si {
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+}
+
+.round-button-si {
+    position: absolute;
+    right: 6%;
+    top: 15%;
+}
+
+.add-document {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.add-doc-form {
+    width: 100%;
+}
+
+.doc-cancel {
+    width: 20%;
+    height: 10%;
+    background-color: #FFFFFF;
+    border: none;
+    margin-top: 5%;
+    margin-left: 55%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: rgba(0, 0, 0, 0.38);
+}
+
+.doc-save {
+    width: 20%;
+    height: 10%;
+    background-color: #FFFFFF;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: #006EAB;
+}
+
+.add-note {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+}
+
+.add-task {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.add-task-title {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    width: 18%;
+    margin-right: 2%;
+}
+
+.add-task-row-one {
+    display: inline-flex;
+    flex-direction: row;
+    padding-bottom: 5.5%;
+}
+
+.task-flag {
+    margin-left: 95%;
+    margin-top: -7%;
+}
+
+.add-task-row-two {
+    display: inline-flex;
+    flex-direction: row;
+    margin-left: 4%;
+    padding-bottom: 1.5%;
+}
+
+.add-task-row-three {
+    display: inline-flex;
+    flex-direction: row;
+    margin-left: 4%;
+}
+
+.task-cancel {
+    width: 20%;
+    height: 5%;
+    background-color: #FFFFFF;
+    border: none;
+    margin-top: 3%;
+    margin-left: 58%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: rgba(0, 0, 0, 0.38);
+}
+
+.task-save {
+    width: 20%;
+    height: 5%;
+    background-color: #FFFFFF;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: #006EAB;
+}
+
+.edit-task-pop-up {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.edit-task-title {
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+.edit-task-note {
+    float: right;
+    margin-top: -15%;
+}
+
+.edit-buttons {
+    margin-top: 5%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit-task-save {
+    width: 20%;
+    height: 5%;
+    background-color: #FFFFFF;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: #006EAB;
+}
+
+.edit-task-cancel {
+    width: 20%;
+    height: 5%;
+    background-color: #FFFFFF;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: rgba(0, 0, 0, 0.38);
+}
+
+.edit-delete {
+    margin-top: -2.5%;
+}
+
+.edit-task-delete {
+    width: 20%;
+    height: 5%;
+    background-color: #FFFFFF;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: rgba(0, 0, 0, 0.38);
+}
+
+.task-complete {
+    background-color: white;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: #CFAC51;
+}
+
+.edit-flag {
+    margin-left: 96%;
+    margin-top: -5%;
+}
+
+.notes {
+    margin-top: -2%;
+}
+
+
+
+label {
+    display: block;
+    height: 16px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: rgba(0,0,0,0.6);
+}

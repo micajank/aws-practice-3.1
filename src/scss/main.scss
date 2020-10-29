@@ -1,0 +1,34 @@
+@import 'config';
+@import 'globalstyles';
+@import 'table';
+@import 'database';
+@import 'tasks';
+@import 'studentdatabase';
+@import 'studentinfo';
+@import 'dashboard';
+@import 'nav';
+@import 'login';
+@import 'studentrecord';
+@import 'classes';
+@import 'usersettings';
+@import 'report';
+@import 'admin';
+
+.App {
+    padding: 1%;
+    width: 1400px;
+    height: auto;
+    margin: 0 auto;
+    main {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-top: 3%;
+    .table-container {
+        width: 100%;
+    }
+}

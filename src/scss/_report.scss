@@ -1,0 +1,46 @@
+.report {
+    display: flex;
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.student-financial-report {
+    width: 30%;
+    max-height: 72%;
+    margin-right: 5%;
+    overflow-y: scroll;
+}
+
+.funding-report {
+    width: 40%;
+    height: 75%;
+}
+
+.pell-grants-reports {
+    background-color: #90D279;
+}
+
+.UBB-funded-reports {
+    background-color: #DC8A70;
+}
+
+.undetermined-reports {
+    background-color: #F3D78D;
+}
+
+.export-student-status-report, .export-funding-report {
+    color: gray;
+}
+
+.download-student-status, .download-funding-report {
+    margin-bottom: 5%;
+}
+
+th, td {
+    text-align: center;
+}
+
+table {
+    border-spacing: 0 .5em;
+}

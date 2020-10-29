@@ -1,0 +1,106 @@
+/* Flag, User, Doc, Due, Assign, Detail, Edit */
+@include setColumnWidths('tasks-table', 5% 10% 10% 10% 10% 50% 5%);
+
+/* Secondary_Nav (TASKS Database_Nav) */
+
+.task-tabs {
+    @extend .tabs;
+    width: 505px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__tab {
+        // position: absolute;
+        width: 250px;
+        height: 52px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0.15px;
+        border-radius: 4px 4px 0px 0px;
+        background: $secondary-color;
+        cursor: pointer;
+        // &__assigned {
+        //     // left: 250px;
+        // }
+        &__active {
+            background: $primary-color;
+        }
+    }
+
+}
+
+/* label above data */
+.data_header {
+    @extend .data-label;
+    width: 320px;
+    height: 38px;
+    top: -10%;
+    left: 33px;
+}
+
+/* custom add button class for positioning */
+.round-button-taskdb {
+    right: 3%;
+    top: 5%;
+}
+
+/* Task DB Container Styling */
+
+.task-box {
+    position: relative;
+}
+
+//mixins
+
+@mixin no-task($status) {
+    .box__#{$status}__none {
+        @extend .box__#{$status};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.box__incomplete {
+        @extend .box;
+        // top: 9%;
+        // height: 60%;
+        // position: relative;
+    }
+
+.box__complete{
+        @extend .box;
+        // top: 60%;
+        // height: 40%;
+        // position: relative;
+    }
+
+@include no-task('complete');
+@include no-task('incomplete');
+
+
+/* Custom Table Styles */
+
+@include setColumnWidths('tasks', .5fr repeat(8, 1fr) 3fr 1fr);
+
+.task__detail-ellipsis {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 90%;
+    }
+
+/* Chip Styles */
+// .task-chip-unselected {
+//     margin-right: 10;
+//     margin-bottom: 10;
+// }
+// .task-chip-selected {
+//     margin-right: 10;
+//     margin-bottom: 10;
+//     // background-color: lightblue;
+// }

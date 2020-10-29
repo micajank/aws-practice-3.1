@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Auth } from "aws-amplify";
+import UBBlogo from '../content/images/UBBlogo.png'
+import TextField from '@material-ui/core/TextField';
 
 export default class CustomSignIn extends Component {
   constructor(props) {
@@ -51,51 +53,45 @@ export default class CustomSignIn extends Component {
 
   render() {
     return (
-      <div className="mx-auto w-full max-w-xs">
-        <div className="login-form">
+      
+        <div className="login">
+        <img src={UBBlogo} alt="logo" />
+        {/* <div className="login-form"> */}
           {this._validAuthStates.includes(this.props.authState) && (
-            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={this.handleFormSubmission}>
-              <div id="username" className="mb-4">
-                <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="username">
-                  Username
-                </label>
-                <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
-                  id="username"
+            <div className="login-form" onSubmit={this.handleFormSubmission}>
+                <label htmlFor="username">Email</label>
+                <TextField
+                  id="outlined-basic"
+                  variant="outlined"
                   key="username"
                   name="username"
+                  style={{width: 400}}
                   onChange={this.handleInputChange}
                   type="text"
-                  placeholder="Username"
+                  placeholder="Email"
                 />
-              </div>
-              <div className="mb-6">
-                <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="password">
-                  Password
-                </label>
-                <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                  id="password"
+                <label htmlFor="password">Password</label>
+                <TextField
+                  id="outlined-basic"
+                  variant="outlined"
                   key="password"
                   name="password"
+                  style={{width: 400}}
                   onChange={this.handleInputChange}
                   type="password"
-                  placeholder="******************"
+                  variant="outlined"
+                  placeholder="Password"
                 />
+              
+              <div className="buttons">
+                <button className="forgot-password">FORGOT PASSWORD?</button>
+                <button className="button-login" type="submit" onClick={this.handleFormSubmission}>Login</button>
               </div>
-              <div className="flex items-center justify-between">
-                <button
-                  className="bg-indigo-400 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                  type="submit"
-                  onClick={this.handleFormSubmission}
-                >
-                  Login
-                </button>
-              </div>
-            </form>
+            </div>
           )}
-        </div>
-      </div>
+          </div>
+        // </div>
+      
     );
   }
 }
